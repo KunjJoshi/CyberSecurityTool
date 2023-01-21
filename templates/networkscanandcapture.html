@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <title>Network Scan and Capture</title>
+        <style>
+            * {
+			padding: 0;
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		/*apply css properties to body*/
+		
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: black;
+		}
+		/*apply css properties to container class*/
+		
+		.container {
+			position: relative;
+			width: 1000px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			padding: 35px;
+		}
+		/*apply css properties to card class*/
+		
+		.container .card {
+			height: 220px;
+			max-width: 300px;
+			position: relative;
+			margin: 30px 10px;
+			padding: 20px 15px;
+			background: #3500D3;
+			display: flex;
+			flex-direction: column;
+			box-shadow: 0 5px 202px #240090;
+			transition: 0.3s ease-in-out;
+		}
+		/*apply css properties to card class when it get pointed by cursor*/
+		
+		.container .card:hover {
+			height: 800px;
+            border-color: #04d9ff;
+            box-shadow: 0 5px 202px #04d9ff;
+		}
+		/*apply css properties to imgbox class*/
+		
+		.containe .card .imgbox {
+			position: relative;
+			width: 260px;
+			height: 260px;
+			top: -60px;
+			left: 20px;
+		}
+		/*apply css properties to img tag*/
+		
+		.container .card .imgbox img {
+			max-width: 100%;
+			border-radius: 4px;
+		}
+		/*apply css properties to content class*/
+		
+		.container .card .content {
+			position: relative;
+			margin-top: -100px;
+			padding: 10px 15px;
+			text-align: center;
+			color: white;
+			visibility: hidden;
+			opacity: 0;
+			transition: 0.3s ease-in-out;
+		}
+		/*apply css properties to content when card gets hovered*/
+		
+		.container .card:hover .content {
+			visibility: visible;
+			opacity: 1;
+			margin-top: -10px;
+			transition-delay: 0.3s;
+		}
+        .heading{
+            color: white;
+            position: relative;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        .btnval{
+            background-color: green;
+            color:white;
+            font-weight: bold;
+            margin-top: 30px;
+            border-radius: 12px;
+            height: 60px;
+            width: 100px;
+        }
+		/* css part completed*/
+        </style>
+    </head>
+    <body>
+        <h1 class="heading"> Network Scan and Capture </h1>
+
+	<!--creating a class container which will hold card class and again card will hold imgbox class-->
+	<div class="container">
+    <div class="card">
+        <div class="imgbox">
+            <!--extracting image named gfg.jpg from images folder-->
+            <img src="https://s42137.pcdn.co/wp-content/uploads/2022/10/AdobeStock_167895118-1568x1045.jpeg.optimal.jpeg">
+        </div>
+        <div class="content">
+            <!--heading of the card-->
+            <h1>Network Scan</h1>
+            <!--content of the card-->
+    <p>
+    Network Scan is the process of scanning the current network for open ports, protocols being run on them and vulnerabilities in the version of protocol being run. Network Scan is an effective measure to find vulnerabilities and resolve them before they lead to some serious attack
+    </p>
+    <form action="/nscan" method="POST">
+    <button class="btnval" type="submit"> More Details </button>  
+    </form>
+</div>
+</div>
+
+<div class="card">
+        <div class="imgbox">
+            <!--extracting image named gfg.jpg from images folder-->
+            <img src="https://www.lockheedmartin.com/content/dam/lockheed-martin/rms/photo/cyber/cyber.jpg">
+        </div>
+        <div class="content">
+            <!--heading of the card-->
+            <h1>Network Capture/Sniff</h1>
+            <!--content of the card-->
+    <p>
+    Network Capture is the process of scanning incoming data packets and outgoing data packets for any kind of malicious activity. Sniffing the contents of data packets will help in detecting incoming virus or malware and sniffing outgoing data packets will help in detecting information and data leakage. 
+    </p>
+    <form action="/ncapture" method="post">
+    <button class="btnval" type="submit"> More Details </button>
+    </form>
+</div>
+</div>
+    </body>
+</html>

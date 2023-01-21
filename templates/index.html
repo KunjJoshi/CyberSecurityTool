@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Welcome to Blackpot Security </title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		/*apply css properties to body*/
+		
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: black;
+		}
+		/*apply css properties to container class*/
+		
+		.container {
+			position: relative;
+			width: 1000px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			padding: 35px;
+		}
+		/*apply css properties to card class*/
+		
+		.container .card {
+			height: 220px;
+			max-width: 200px;
+			position: relative;
+			margin: 30px 10px;
+			padding: 20px 15px;
+			background: #3500D3;
+			display: flex;
+			flex-direction: column;
+			box-shadow: 0 5px 202px #240090;
+			transition: 0.3s ease-in-out;
+		}
+		/*apply css properties to card class when it get pointed by cursor*/
+		
+		.container .card:hover {
+			height: 800px;
+            border-color: #04d9ff;
+            box-shadow: 0 5px 202px #04d9ff;
+		}
+		/*apply css properties to imgbox class*/
+		
+		.containe .card .imgbox {
+			position: relative;
+			width: 260px;
+			height: 260px;
+			top: -60px;
+			left: 20px;
+		}
+		/*apply css properties to img tag*/
+		
+		.container .card .imgbox img {
+			max-width: 100%;
+			border-radius: 4px;
+		}
+		/*apply css properties to content class*/
+		
+		.container .card .content {
+			position: relative;
+			margin-top: -100px;
+			padding: 10px 15px;
+			text-align: center;
+			color: white;
+			visibility: hidden;
+			opacity: 0;
+			transition: 0.3s ease-in-out;
+		}
+		/*apply css properties to content when card gets hovered*/
+		
+		.container .card:hover .content {
+			visibility: visible;
+			opacity: 1;
+			margin-top: -10px;
+			transition-delay: 0.3s;
+		}
+        .heading{
+            color: white;
+            position: relative;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        .btnval{
+            background-color: green;
+            color:white;
+            font-weight: bold;
+            margin-top: 30px;
+            border-radius: 12px;
+            height: 60px;
+            width: 100px;
+        }
+		/* css part completed*/
+	</style>
+
+</head>
+
+<body>
+    <h1 class="heading"> Services Provided </h1>
+
+	<!--creating a class container which will hold card class and again card will hold imgbox class-->
+	<div class="container">
+    <div class="card">
+        <div class="imgbox">
+            <!--extracting image named gfg.jpg from images folder-->
+            <img src="https://miro.medium.com/max/1400/1*jIYoZf_L37O7mTb6EkLZOg.jpeg">
+        </div>
+        <div class="content">
+            <!--heading of the card-->
+            <h1>SQL Injection</h1>
+            <!--content of the card-->
+    <p>
+    SQL Injection is a code injection based attack, used to manipulate SQL Databases and get fake authentication. SQL Injection can be prevented using parametrization and it can be easily detected using code review. One can easily get access to either admin account or to user account using SQL Injection codes. 
+    </p>
+    <form action="/sqlinjection" method="POST">
+    <button class="btnval" type="submit"> More Details </button>  
+    </form>
+</div>
+</div>
+
+<div class="card">
+        <div class="imgbox">
+            <!--extracting image named gfg.jpg from images folder-->
+            <img src="https://www.enterprisenetworkingplanet.com/wp-content/uploads/2022/04/Top-Network-Scanning-Tools-scaled-e1649280158741.jpeg">
+        </div>
+        <div class="content">
+            <!--heading of the card-->
+            <h1>Network Scan and Capture</h1>
+            <!--content of the card-->
+    <p>
+    Capturing data packets from a network is really important to check whether an attack is being carried out in the network or not. Analysis of such data packets is a useful method to detect and prevent DoS and DDoS attacks. Network scanning can also show us open ports and their version numbers, the industry standard being nmap. But having a Network Scanner of our own will help us in personified analysis of data captured from the network.
+    </p>
+    <form action="/network_capture" method="post">
+    <button class="btnval" type="submit"> More Details </button>
+    </form>
+</div>
+</div>
+
+<div class="card">
+        <div class="imgbox">
+            <!--extracting image named gfg.jpg from images folder-->
+            <img src="https://www.reversinglabs.com/hubfs/Blog/Blog-Cover-Malware-in-Images.jpg">
+        </div>
+        <div class="content">
+            <!--heading of the card-->
+            <h1>Malware Detection</h1>
+            <!--content of the card-->
+    <p>
+    Machine Learning models such as Random Forest and XGBoost have provided ultimate results in detection of malware based in file analysis. Details such as contents of files, authors, properties and metadata of the file reveal a lot of information about the file and can potentially be used to classify a file as a malware or not. We have already received 98% accuracy in earlier models and with evergrowing dataset of the files in our model, we can also achieve more than 99.5% accuracy in the field.
+    </p>
+    <button class="btnval" onclick="hreffuncsql()"> More Details </button>
+</div>
+</div>
+
+<div class="card">
+        <div class="imgbox">
+            <!--extracting image named gfg.jpg from images folder-->
+            <img src="https://i0.wp.com/blog.knoldus.com/wp-content/uploads/2021/09/pexels-photo-160107.jpeg?fit=810%2C539&ssl=1">
+        </div>
+        <div class="content">
+            <!--heading of the card-->
+            <h1>Reverse Shell</h1>
+            <!--content of the card-->
+    <p>
+    A Reverse Shell is an attack carried out by an attacker in a client computer, such that the host gets full command line access of the client. It is very easy to code and can be deployed using social engineering techniques. The Reverse Shell detection is equally easy and can be done through checking of logs and looking at whether or not malicious commands have been passed out of the network or not
+    </p>
+    <button class="btnval" onclick="hreffuncsql()"> More Details </button>
+</div>
+</div>
+
+<div class="card">
+        <div class="imgbox">
+            <!--extracting image named gfg.jpg from images folder-->
+            <img src="https://f.hubspotusercontent40.net/hubfs/4650993/Blog_Content/Avg/Signal/AVG%20Signal%20Images/Keyloggers%20What%20They%20Are/What_is_a_Keylogger-Thumb.jpg">
+        </div>
+        <div class="content">
+            <!--heading of the card-->
+            <h1>Keylogger</h1>
+            <!--content of the card-->
+    <p>
+    A keylogger is a software which notes down each and every keystroke and the time of keystroke. It is very easy to implement, but very hard to detect. It is used for espionage and hijacking accounts of social media and other such accounts using hijacked passwords. Keylogger can be detected if a code segment is continuously using a file from outside the network. 
+    </p>
+    <form action="/keylog" method="post">
+        <button class="btnval" type="submit"> More Details </button>
+        </form>
+    
+</div>
+</div>
+
+<div class="card">
+        <div class="imgbox">
+            <!--extracting image named gfg.jpg from images folder-->
+            <img src="https://mydlp.com/wp-content/uploads/data-loss-prevention-new.png">
+        </div>
+        <div class="content">
+            <!--heading of the card-->
+            <h1>Data Loss Prevention</h1>
+            <!--content of the card-->
+    <p>
+    Stopping data from getting into unauthorised hands is one of the most important and basic strategies of Cybersecurity. It is based on the pillar of cybersecurity called privacy. Most of the losses incurred by the companies due to security breaches are due to data leakage. Google Cloud Platform avails DLP tools and API which can be implemented to secure data from leakage. 
+    </p>
+    <button class="btnval" onclick="hreffuncsql()"> More Details </button>
+</div>
+</div>
+
+<div class="card">
+        <div class="imgbox">
+            <!--extracting image named gfg.jpg from images folder-->
+            <img src="https://easebuzz.in/blog/wp-content/uploads/2022/06/Payment-Gatway-copy.jpg">
+        </div>
+        <div class="content">
+            <!--heading of the card-->
+            <h1>Payment Gateway Testing</h1>
+            <!--content of the card-->
+    <p>
+    Payment Gateways are sensitive portions of any applications as it handles all the outgoing and incoming cash flow of the business. Insecure Payment Gateways can lead to loss in millions of dollars and hence PGT is preferred to be done manually over automation. A few basic PGT Tests can be simulated online, which will be done in our tool and our tool will allow Payment Gateway Testing and Secure Payments.
+    </p>
+    <button class="btnval" onclick="hreffuncsql()"> More Details </button>
+</div>
+</div>
+<div class="card">
+    <div class="imgbox">
+        <!--extracting image named gfg.jpg from images folder-->
+        <img src="https://www.globalsign.com/application/files/8915/9434/4224/large-General_Banner_Types_of_TLS_Certificates_1_APAC_2020_05_04.jpg">
+    </div>
+    <div class="content">
+        <!--heading of the card-->
+        <h1>SSL Certificate Details</h1>
+        <!--content of the card-->
+<p>
+A Secure Sockets Layer (SSL) Certificate is a Security Certificate issued by a known Certificate Authority and keeps a website safe and secure. SSL certificates are what enable websites to move from HTTP to HTTPS, which is more secure. An SSL certificate is a data file hosted in a website's origin server. SSL certificates make SSL/TLS encryption possible, and they contain the website's public key and the website's identity, along with related information. 
+</p>
+<form action="/ssldetails" method="post">
+    <button class="btnval" type="submit"> More Details </button>
+    </form>
+
+</div>
+</div>
+
+</div>
+</body>
+</html>
